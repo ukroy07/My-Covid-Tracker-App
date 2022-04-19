@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CountryActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Search Here"
+        android:imeOptions="actionSearch"
+        android:maxLines="1"
+        android:background="@drawable/search_back"
+        android:padding="8dp"
+        android:drawablePadding="4dp"
+        android:layout_margin="8dp"
+        android:id="@+id/searchBar"
+        android:drawableLeft="@drawable/ic_search"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginVertical="12dp"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@string/bold"
+            android:text="Sr No"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="110dp"
+            android:fontFamily="@string/bold"
+            android:text="Country Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:text="Total Cases"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            android:fontFamily="@string/bold"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/countries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/country_item_layout">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
